@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 11:48:04 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/08 13:08:58 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/08 13:23:45 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static	size_t	total_len(size_t argc, char **argv, char *delim)
 	delim_len = ft_strlen(delim);
 	while(i < argc)
 	{
-		len = ft_strlen(argv[i]);
+		len += ft_strlen(argv[i]);
 		if (i != argc - 1)
 			len += delim_len;
 		i++;
@@ -32,7 +32,20 @@ static	size_t	total_len(size_t argc, char **argv, char *delim)
 	return (len);
 }
 
-static	size_t	fill_new_str(char *new_str, size_t argc,
+static	void	add_delim(size_t *k, char *new_str, char *delim)
+{
+	size_t	i;
+
+	i = 0;
+	while (delim[i])
+	{
+		new_str[*k] = delim[i];
+		i ++;
+		*k = *k + 1;
+	}
+}
+
+static	void	fill_new_str(char *new_str, size_t argc,
 					char **argv, char *delim)
 {
 	size_t	i;
@@ -50,6 +63,9 @@ static	size_t	fill_new_str(char *new_str, size_t argc,
 			k++;
 			j++;
 		}
+		if (i != argc - 1)
+			add_delim(&k, new_str, delim);
+		i++;
 	}
 }
 
@@ -62,5 +78,6 @@ char	*ft_strjoin(size_t argc, char **argv, char *delim)
 	new_str = (char *)ft_calloc(total_len(argc, argv, delim), sizeof(char));
 	if (!new_str)
 		return (NULL);
-	
+	fill_new_str(new_str, argc, argv, delim);
+	return (new_str);
 }
