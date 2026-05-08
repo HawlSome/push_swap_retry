@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 11:48:04 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/08 13:23:45 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/08 14:58:45 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static	size_t	total_len(size_t argc, char **argv, char *delim)
 	i = 0;
 	len = 0;
 	delim_len = ft_strlen(delim);
-	while(i < argc)
+	while (i < argc)
 	{
 		len += ft_strlen(argv[i]);
 		if (i != argc - 1)
@@ -57,7 +57,7 @@ static	void	fill_new_str(char *new_str, size_t argc,
 	while (i < argc)
 	{
 		j = 0;
-		while(argv[i][j])
+		while (argv[i][j])
 		{
 			new_str[k] = argv[i][j];
 			k++;
