@@ -29,14 +29,11 @@ void	stack_add_front(t_stack **stack, t_stack *node);
 t_stack	*stack_last(t_stack *stack);
 void	stack_add_back(t_stack **stack, t_stack *node);
 
-
 void	*ft_calloc(size_t nmemb, size_t size);
 size_t	ft_strlen(char *str);
 char	*ft_substr(char *str, unsigned int start, size_t len);
-void	free_2D(char **arr_str);
+void	free_2d(char **arr_str);
 char	*ft_strjoin(size_t argc, char **argv, char *delim);
 char	**ft_split(char *str);
-
-
 
 #endif
