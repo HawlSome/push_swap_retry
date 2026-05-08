@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 11:05:25 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/08 11:49:07 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/08 14:12:21 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,14 @@ char	*ft_substr(char *str, unsigned int start, size_t len)
 		i++;
 	}
 	return (sb_str);
+}
+
+void	free_2D(char **arr_str)
+{
+	size_t	i;
+
+	i = 0;
+	while (arr_str && arr_str[i])
+		free(arr_str[i++]);
+	free(arr_str);
 }
