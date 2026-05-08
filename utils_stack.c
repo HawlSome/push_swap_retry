@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 16:26:45 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/08 11:50:52 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:03:04 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ t_stack	*stack_last(t_stack *stack)
 void	stack_add_back(t_stack **stack, t_stack *node)
 {
 	t_stack	*last_elem;
-	
+
 	if (!node || !stack)
 		return ;
 	if (!*stack)
