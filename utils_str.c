@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 11:05:25 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/08 14:12:21 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:04:46 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*res;
 	size_t	i;
-	
+
 	if (size && nmemb > (size_t)-1 / size)
 		return (NULL);
 	res = malloc(nmemb * size);
@@ -25,16 +25,16 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	i = 0;
 	while (i < (nmemb * size))
 		((unsigned char *)res)[i++] = (unsigned char)0;
-	return res;
+	return (res);
 }
 
 size_t	ft_strlen(char *str)
 {
 	size_t	len;
-	
+
 	len = 0;
 	if (!str)
-		return(len);
+		return (len);
 	while (str[len])
 		len++;
 	return (len);
@@ -55,7 +55,7 @@ char	*ft_substr(char *str, unsigned int start, size_t len)
 	if (!sb_str)
 		return (NULL);
 	i = 0;
-	while(i < len && str[start + i])
+	while (i < len && str[start + i])
 	{
 		sb_str[i] = str[start + i];
 		i++;
@@ -63,7 +63,7 @@ char	*ft_substr(char *str, unsigned int start, size_t len)
 	return (sb_str);
 }
 
-void	free_2D(char **arr_str)
+void	free_2d(char **arr_str)
 {
 	size_t	i;
 
