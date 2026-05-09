@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 13:29:23 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/08 15:05:29 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/09 04:06:02 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	is_delim(char c)
 {
-	if (c == 32 || c >= 9 && c <= 13)
+	if (c == 32 || (c >= 9 && c <= 13))
 		return (1);
 	return (0);
 }
