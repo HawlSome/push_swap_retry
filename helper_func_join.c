@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 11:48:04 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/08 14:58:45 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/09 04:22:58 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@ static	size_t	total_len(size_t argc, char **argv, char *delim)
 	delim_len = ft_strlen(delim);
 	while (i < argc)
 	{
+		if (!argv[i])
+		{
+			i++;
+			continue ;
+		}
 		len += ft_strlen(argv[i]);
 		if (i != argc - 1)
 			len += delim_len;
@@ -57,6 +62,11 @@ static	void	fill_new_str(char *new_str, size_t argc,
 	while (i < argc)
 	{
 		j = 0;
+		if (!argv[i])
+		{
+			i++;
+			continue ;
+		}
 		while (argv[i][j])
 		{
 			new_str[k] = argv[i][j];
@@ -73,7 +83,7 @@ char	*ft_strjoin(size_t argc, char **argv, char *delim)
 {
 	char	*new_str;
 
-	if (!delim)
+	if (!delim || !argv)
 		return (NULL);
 	new_str = (char *)ft_calloc(total_len(argc, argv, delim), sizeof(char));
 	if (!new_str)
