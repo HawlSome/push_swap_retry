@@ -25,10 +25,17 @@ typedef struct s_flags
 }	t_flags;
 
 t_stack	*new_stack_node(int value);
+t_stack	*stack_last(t_stack *stack);
 size_t	size_stack(t_stack *stack);
 void	stack_add_front(t_stack **stack, t_stack *node);
 void	stack_add_back(t_stack **stack, t_stack *node);
 void	new_stack(t_stack **stack, int value);
+
+t_moves	*new_move_node(char *move_name);
+size_t	size_moves(t_moves *moves);
+void	move_add_front(t_moves **moves, t_moves *node);
+void	move_add_back(t_moves **moves,	t_moves	*node);
+void	new_move(t_moves **moves, char *move_name);
 
 t_flags	*new_flag_node(char *algo, int is_adaptive);
 size_t	size_flag(t_flags *flag);
@@ -53,5 +60,17 @@ int		is_clone(char *current, char *next);
 int		is_valid_flag(char *input);
 int		verif(char **clean_input);
 int		parse(int argc, char **argv, t_stack **a, t_flags **flags);
+
+void	pa(t_stack **a, t_stack **b, t_moves **moves, int save);
+void	pb(t_stack **a, t_stack **b, t_moves **moves, int save);
+void	sa(t_stack **stack, t_moves **moves, int save);
+void	sb(t_stack **stack, t_moves **moves, int save);
+void	ss(t_stack **stack_a, t_stack **stack_b, t_moves **moves, int save);
+void	ra(t_stack **stack, t_moves **moves, int save);
+void	rb(t_stack **stack, t_moves **moves, int save);
+void	rr(t_stack **stack_a, t_stack **stack_b, t_moves **moves, int save);
+void 	rra(t_stack **stack, t_moves **moves, int save);
+void 	rrb(t_stack **stack, t_moves **moves, int save);
+void 	rrr(t_stack **stack_a, t_stack **stack_b, t_moves **moves, int save);
 
 #endif
