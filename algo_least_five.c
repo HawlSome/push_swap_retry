@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 09:12:37 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/10 10:24:25 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/10 10:27:36 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	algo_least_five(t_stack **stack_a, t_stack **stack_b, t_moves **moves)
 
 	if (!stack_a || !*stack_a)
 		return ;
-	size_stack_a = 0;
+	size_stack_a = size_stack(*stack_a);
 	while (size_stack_a > 3)
 	{
 		min_index = find_min(*stack_a);
@@ -90,6 +90,7 @@ void	algo_least_five(t_stack **stack_a, t_stack **stack_b, t_moves **moves)
 			min_index --;
 		}
 		pb(stack_a, stack_b, moves, 1);
+		size_stack_a --;
 	}
 	if (size_stack_a == 3)
 	{
