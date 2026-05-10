@@ -6,16 +6,16 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 04:23:32 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/10 04:42:37 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/10 10:21:01 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void reverse_rotate(t_stack **stack)
+static void	reverse_rotate(t_stack **stack)
 {
 	t_stack	*last_elem;
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
@@ -29,21 +29,21 @@ static void reverse_rotate(t_stack **stack)
 	stack_add_front(stack, last_elem);
 }
 
-void rra(t_stack **stack, t_moves **moves, int save)
+void	rra(t_stack **stack, t_moves **moves, int save)
 {
 	reverse_rotate(stack);
 	if (save)
 		new_move(moves, "rra");
 }
 
-void rrb(t_stack **stack, t_moves **moves, int save)
+void	rrb(t_stack **stack, t_moves **moves, int save)
 {
 	reverse_rotate(stack);
 	if (save)
 		new_move(moves, "rrb");
 }
 
-void rrr(t_stack **stack_a, t_stack **stack_b, t_moves **moves, int save)
+void	rrr(t_stack **stack_a, t_stack **stack_b, t_moves **moves, int save)
 {
 	reverse_rotate(stack_a);
 	reverse_rotate(stack_b);
