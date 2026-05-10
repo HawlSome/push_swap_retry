@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 17:00:12 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/10 04:48:30 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/10 10:23:20 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static	t_moves	*move_last(t_moves *move)
 {
-	while(move && move->next)
+	while (move && move->next)
 		move = move->next;
 	return (move);
 }
@@ -54,10 +54,10 @@ void	move_add_front(t_moves **moves, t_moves *node)
 	*moves = node;
 }
 
-void	 move_add_back(t_moves **moves,	t_moves	*node)
+void	move_add_back(t_moves **moves,	t_moves	*node)
 {
 	t_moves	*last_elem;
-	
+
 	if (!moves || !node)
 		return ;
 	if (!*moves)
