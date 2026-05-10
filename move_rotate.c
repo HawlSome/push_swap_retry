@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 03:48:35 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/10 04:08:47 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/10 10:21:18 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	rotate(t_stack **stack)
 {
 	t_stack	*tmp;
-	
+
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
 	tmp = *stack;
