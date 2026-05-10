@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 21:55:54 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/10 04:00:11 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/10 10:19:45 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,16 @@ static void	push(t_stack **from, t_stack **to)
 	stack_add_front(to, node);
 }
 
-
 void	pa(t_stack **a, t_stack **b, t_moves **moves, int save)
 {
-	push(a, b);
+	push(b, a);
 	if (save)
 		new_move(moves, "pa");
 }
 
 void	pb(t_stack **a, t_stack **b, t_moves **moves, int save)
 {
-	push(b, a);
+	push(a, b);
 	if (save)
-		new_move(moves, "pb");	
+		new_move(moves, "pb");
 }
