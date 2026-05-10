@@ -24,6 +24,8 @@ typedef struct s_flags
 	struct s_flags	*next;
 }	t_flags;
 
+float	compute_disorder(t_stack *a);
+
 t_stack	*new_stack_node(int value);
 t_stack	*stack_last(t_stack *stack);
 size_t	size_stack(t_stack *stack);
@@ -69,8 +71,10 @@ void	ss(t_stack **stack_a, t_stack **stack_b, t_moves **moves, int save);
 void	ra(t_stack **stack, t_moves **moves, int save);
 void	rb(t_stack **stack, t_moves **moves, int save);
 void	rr(t_stack **stack_a, t_stack **stack_b, t_moves **moves, int save);
-void 	rra(t_stack **stack, t_moves **moves, int save);
-void 	rrb(t_stack **stack, t_moves **moves, int save);
-void 	rrr(t_stack **stack_a, t_stack **stack_b, t_moves **moves, int save);
+void	rra(t_stack **stack, t_moves **moves, int save);
+void	rrb(t_stack **stack, t_moves **moves, int save);
+void	rrr(t_stack **stack_a, t_stack **stack_b, t_moves **moves, int save);
 
+void	algo_least_five(t_stack **stack_a, t_stack **stack_b, t_moves **moves);
+void	algo_least_five(t_stack **stack_a, t_stack **stack_b, t_moves **moves);
 #endif
