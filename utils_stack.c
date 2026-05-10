@@ -6,13 +6,13 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 16:26:45 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/09 04:27:43 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/10 04:32:40 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static t_stack	*stack_last(t_stack *stack)
+t_stack	*stack_last(t_stack *stack)
 {
 	while (stack && stack->next)
 		stack = stack->next;
@@ -59,6 +59,7 @@ void	stack_add_back(t_stack **stack, t_stack *node)
 
 	if (!node || !stack)
 		return ;
+	node->next = NULL;
 	if (!*stack)
 	{
 		*stack = node;
