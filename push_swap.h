@@ -78,8 +78,11 @@ void	rrr(t_stack **stack_a, t_stack **stack_b, t_moves **moves, int save);
 void	push_back(t_stack **stack_a, t_stack **stack_b, t_moves **moves);
 void	attribute_index(t_stack *stack);
 size_t	ft_sqrt(size_t nbr);
+void	push_back_medium(t_stack **stack_a, t_stack **stack_b,
+			t_moves **moves);
 
 void	algo_least_five(t_stack **stack_a, t_stack **stack_b, t_moves **moves);
 void	algo_simple(t_stack **stack_a, t_stack **stack_b, t_moves **moves);
+void	algo_medium(t_stack **stack_a, t_stack **stack_b, t_moves **moves);
 
 #endif
