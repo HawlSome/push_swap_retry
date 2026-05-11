@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 09:12:37 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/10 10:27:36 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/11 02:45:15 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,12 +65,6 @@ static void	sort_three_max(t_stack **stack_a, t_moves **moves)
 		ra(stack_a, moves, 1);
 	if (max_index == 1)
 		rra(stack_a, moves, 1);
-}
-
-static void	push_back(t_stack **stack_a, t_stack **stack_b, t_moves **moves)
-{
-	while (*stack_b)
-		pa(stack_a, stack_b, moves, 1);
 }
 
 void	algo_least_five(t_stack **stack_a, t_stack **stack_b, t_moves **moves)
