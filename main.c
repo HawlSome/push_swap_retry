@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 15:11:54 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/09 04:30:44 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/11 19:48:13 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ int	main(int argc, char **argv)
 	{
 		ft_printf(2, "Error");
 		return (0);
+	}
+	algo_medium(&a, &b, &moves);
+	while (moves)
+	{
+		ft_printf(1, "%s\n", moves->name);
+		moves = moves->next;
 	}
 	return (0);
 }
