@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 21:55:54 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/10 10:19:45 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/11 19:20:39 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	push(t_stack **from, t_stack **to)
 		return ;
 	node = *from;
 	*from = (*from)->next;
-	// node->next  = NULL;
+	node->next  = NULL;
 	stack_add_front(to, node);
 }
 
