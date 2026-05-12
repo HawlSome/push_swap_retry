@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo_least_five.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ramandri <ramandri@student.42antananari    +#+  +:+       +#+        */
+/*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 09:12:37 by ramandri          #+#    #+#             */
-/*   Updated: 2026/05/12 03:17:39 by ramandri         ###   ########.fr       */
+/*   Updated: 2026/05/12 17:34:27 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
