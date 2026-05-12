@@ -40,6 +40,7 @@ void	move_add_back(t_moves **moves,	t_moves	*node);
 void	new_move(t_moves **moves, char *move_name);
 
 t_flags	*new_flag_node(char *algo, int is_adaptive);
+t_flags	*flag_last(t_flags *flag);
 size_t	size_flag(t_flags *flag);
 void	flag_add_front(t_flags **flag, t_flags *node);
 void	flag_add_back(t_flags **flag, t_flags *node);
@@ -80,9 +81,22 @@ void	attribute_index(t_stack *stack);
 size_t	ft_sqrt(size_t nbr);
 void	push_back_medium(t_stack **stack_a, t_stack **stack_b,
 			t_moves **moves);
+int		is_executable_flag(t_flags *flag);
+t_flags	*get_executable_flag(t_flags *flag);
+int		is_elem_in_flags(t_flags *flags, char *str);
 
+void	algo_adaptive(t_stack **stack_a, t_stack **stack_b, t_moves **moves,
+			t_flags **flags);
 void	algo_least_five(t_stack **stack_a, t_stack **stack_b, t_moves **moves);
 void	algo_simple(t_stack **stack_a, t_stack **stack_b, t_moves **moves);
 void	algo_medium(t_stack **stack_a, t_stack **stack_b, t_moves **moves);
+void	algo_complex(t_stack **stack_a, t_stack **stack_b, t_moves **moves);
+void	push_swap(t_stack **stack_a, t_stack **stack_b, t_moves **moves,
+			t_flags **flags);
+void	bench_mark(float disorder, t_flags **flags, t_moves **moves);
+
+void	stack_clear(t_stack	**stack);
+void	moves_clear(t_moves	**moves);
+void	flags_clear(t_flags **flags);
 
 #endif
