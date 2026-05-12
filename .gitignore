@@ -1,4 +1,4 @@
 push_swap
-checker_linux
+checker*
 *.out
 a.out
