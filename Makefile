@@ -1,6 +1,8 @@
 
 NAME = push_swap
 
+BONUS_NAME = checker
+
 PRINTF_DIR = ft_printf
 
 SRC = helper_func_split.c \
@@ -31,7 +33,14 @@ SRC = helper_func_split.c \
 		algo_adaptive.c \
 		input_verification.c
 
+BONUS_SRC = bonus_execute_chechker.c \
+			bonus_checker.h \
+			bonus_input_parse.c \
+			bonus_get_next_line.c
+
 OBJ = $(SRC:.c=.o)
+
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 CC = cc
 
@@ -41,23 +50,29 @@ PRINTF = $(PRINTF_DIR)/libftprintf.a
 
 all: $(NAME)
 
+bonus: $(BONUS_NAME) 
+
 $(NAME): $(OBJ) $(PRINTF)
 	@$(CC) $(CFLAGS) $(OBJ) $(PRINTF) -o $(NAME)
 
 $(PRINTF):
 	@$(MAKE) -C $(PRINTF_DIR)
 
-%.o: %.c push_swap.h
+$(BONUS_NAME): $(BONUS_OBJ) $(PRINTF)
+	@$(CC) $(CFLAGS) $(BONUS_OBJ) $(PRINTF) -o(BONUS_NAME)
+
+%.o: %.c push_swap.h bonus_checker.h
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@$(MAKE) clean -C $(PRINTF_DIR)
-	@rm -rf $(OBJ)
+	@rm -rf $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
 	@$(MAKE) fclean -C $(PRINTF_DIR)
-	@rm -rf $(NAME)
+	@rm -rf $(NAME) $(BONUS_NAME)
 
 re: fclean all
+
 
 .PHONY: all clean fclean re
