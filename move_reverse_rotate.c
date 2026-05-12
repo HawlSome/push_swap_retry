@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move_reverse_rotate.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
+/*   By: ramandri <ramandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/10 04:23:32 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/10 10:21:01 by varandri         ###   ########.fr       */
+/*   Created: 2026/04/28 04:23:32 by ramandri          #+#    #+#             */
+/*   Updated: 2026/05/10 10:21:01 by ramandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
