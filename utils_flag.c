@@ -6,13 +6,13 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 07:09:39 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/09 04:26:32 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/12 00:06:30 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static t_flags	*flag_last(t_flags *flag)
+t_flags	*flag_last(t_flags *flag)
 {
 	while (flag && flag->next)
 		flag = flag->next;

@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 15:46:39 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/07 17:13:28 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/12 02:57:56 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ float	compute_disorder(t_stack *a)
 		}
 		a = a->next;
 	}
-	return (mistakes / total_pairs);
+	if (!total_pairs)
+		return ((float)0);
+	return ((float)mistakes / (float)total_pairs);
 }

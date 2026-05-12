@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 15:11:54 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/09 04:30:44 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/12 03:14:53 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,13 @@ int	main(int argc, char **argv)
 	flags = NULL;
 	if (!parse(argc, argv, &a, &flags))
 	{
-		ft_printf(2, "Error");
+		ft_printf(2, "Error\n");
 		return (0);
 	}
+	push_swap(&a, &b, &moves, &flags);
+	stack_clear(&a);
+	stack_clear(&b);
+	flags_clear(&flags);
+	moves_clear(&moves);
 	return (0);
 }

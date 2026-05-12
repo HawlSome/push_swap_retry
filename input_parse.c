@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 05:59:12 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/09 04:17:38 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/12 13:45:10 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@ static void	fill_flag(char **clean_input, t_flags **flags)
 	while (clean_input[i])
 	{
 		if (!ft_strcmp(clean_input[i], "--adaptive"))
-			new_flag(flags, "--adaptive", 1);
+			new_flag(flags, "adaptive", 1);
 		if (!ft_strcmp(clean_input[i], "--bench"))
-			new_flag(flags, "--bench", 0);
+			new_flag(flags, "bench", 0);
 		if (!ft_strcmp(clean_input[i], "--simple"))
-			new_flag(flags, "--simple", 0);
+			new_flag(flags, "simple", 0);
 		if (!ft_strcmp(clean_input[i], "--medium"))
-			new_flag(flags, "--medium", 0);
+			new_flag(flags, "medium", 0);
 		if (!ft_strcmp(clean_input[i], "--complex"))
-			new_flag(flags, "--complex", 0);
+			new_flag(flags, "complex", 0);
 		i++;
 	}
 }
