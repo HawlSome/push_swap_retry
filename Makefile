@@ -1,0 +1,63 @@
+
+NAME = push_swap
+
+PRINTF_DIR = ft_printf
+
+SRC = helper_func_split.c \
+		algo_least_five.c \
+		utils_algo.c \
+		algo_medium.c \
+		move_push.c \
+		utils_cleaning.c \
+		utils_flag.c \
+		function_bench.c \
+		algo_complex.c \
+		utils_stack.c \
+		main.c \
+		function_disorder_metric.c \
+		utils_str.c \
+		utils_executer.c \
+		algo_simple.c \
+		utils_verification.c \
+		utils_initializer.c \
+		move_rotate.c \
+		executer_push_swap.c \
+		move_reverse_rotate.c \
+		input_parse.c \
+		utils_move.c \
+		helper_func_join.c \
+		utils_int.c \
+		move_swap.c \
+		algo_adaptive.c \
+		input_verification.c
+
+OBJ = $(SRC:.c=.o)
+
+CC = cc
+
+CFLAGS = -Wall -Werror -Wextra
+
+PRINTF = $(PRINTF_DIR)/libftprintf.a
+
+all: $(NAME)
+
+$(NAME): $(OBJ) $(PRINTF)
+	@$(CC) $(CFLAGS) $(OBJ) $(PRINTF) -o $(NAME)
+
+$(PRINTF):
+	@$(MAKE) -C $(PRINTF_DIR)
+
+%.o: %.c push_swap.h
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	@$(MAKE) clean -C $(PRINTF_DIR)
+	@rm -rf $(OBJ)
+
+fclean: clean
+	@$(MAKE) fclean -C $(PRINTF_DIR)
+	@rm -rf $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
