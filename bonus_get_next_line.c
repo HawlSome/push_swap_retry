@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 10:01:37 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/12 11:51:30 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/12 14:32:47 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static char	*get_all_lines(int fd, char *stash)
 	ssize_t	byte_read;
 	char	*temp;
 	char	*buff;
-	
+
 	buff = (char *)ft_calloc(BUFFER_SIZE + 1, sizeof(char));
 	if (!buff)
 		return (NULL);
@@ -54,7 +54,7 @@ static char	*get_all_lines(int fd, char *stash)
 	return (stash);
 }
 
-static char *extract_line(char **stash)
+static char	*extract_line(char **stash)
 {
 	char	*extracted;
 	char	*leftover;
@@ -74,11 +74,11 @@ static char *extract_line(char **stash)
 	return (extracted);
 }
 
-char	*get_next_line(int	fd)
+char	*get_next_line(int fd)
 {
 	static char	*stash;
 	char		*line;
-	
+
 	if (BUFFER_SIZE <= 0 || fd < 0)
 	{
 		free(stash);
