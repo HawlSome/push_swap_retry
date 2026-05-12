@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 10:15:12 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/12 11:49:04 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/12 15:08:56 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	gnl_memmove(char *str_1, char *str_2, size_t n)
 {
 	unsigned char	*s_1;
 	unsigned char	*s_2;
-	
+
 	if (str_1 == str_2 || n == 0)
 		return ;
 	s_1 = (unsigned char *)str_1;
