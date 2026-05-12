@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
+/*   By: ramandri <ramandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/12 15:19:39 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/12 15:19:40 by varandri         ###   ########.fr       */
+/*   Created: 2026/04/27 15:19:39 by ramandri          #+#    #+#             */
+/*   Updated: 2026/05/12 16:26:28 by ramandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
