@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_cleaning.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
+/*   By: ramandri <ramandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/11 22:52:40 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/12 03:00:19 by varandri         ###   ########.fr       */
+/*   Created: 2026/05/02 22:52:40 by ramandri          #+#    #+#             */
+/*   Updated: 2026/05/12 03:00:19 by ramandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
