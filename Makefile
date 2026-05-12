@@ -15,7 +15,6 @@ SRC = helper_func_split.c \
 		function_bench.c \
 		algo_complex.c \
 		utils_stack.c \
-		main.c \
 		function_disorder_metric.c \
 		utils_str.c \
 		utils_executer.c \
@@ -33,14 +32,18 @@ SRC = helper_func_split.c \
 		algo_adaptive.c \
 		input_verification.c
 
-BONUS_SRC = bonus_execute_chechker.c \
-			bonus_checker.h \
-			bonus_input_parse.c \
-			bonus_get_next_line.c
+MAIN_SRC = 	main.c
 
-OBJ = $(SRC:.c=.o)
 
-BONUS_OBJ = $(BONUS_SRC:.c=.o)
+BONUS_SRC = bonus_input_parse.c \
+			bonus_get_next_line.c \
+			bonus_utils_checker.c \
+			bonus_checker.c \
+			bonus_utils_get_next_line.c
+
+OBJ = $(SRC:.c=.o) $(MAIN_SRC:.c=.o)
+
+BONUS_OBJ = $(SRC:.c=.o) $(BONUS_SRC:.c=.o)
 
 CC = cc
 
@@ -59,7 +62,10 @@ $(PRINTF):
 	@$(MAKE) -C $(PRINTF_DIR)
 
 $(BONUS_NAME): $(BONUS_OBJ) $(PRINTF)
-	@$(CC) $(CFLAGS) $(BONUS_OBJ) $(PRINTF) -o(BONUS_NAME)
+	@$(CC) $(CFLAGS) $(BONUS_OBJ) $(PRINTF) -o $(BONUS_NAME)
+	@$(MAKE) clean -C $(PRINTF_DIR)
+	@rm -rf $(OBJ)
+
 
 %.o: %.c push_swap.h bonus_checker.h
 	@$(CC) $(CFLAGS) -c $< -o $@
