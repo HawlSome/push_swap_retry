@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo_adaptive.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
+/*   By: ramandri <ramandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/11 23:28:16 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/12 03:00:34 by varandri         ###   ########.fr       */
+/*   Created: 2026/04/28 23:28:16 by ramandri          #+#    #+#             */
+/*   Updated: 2026/05/12 03:00:34 by ramandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
