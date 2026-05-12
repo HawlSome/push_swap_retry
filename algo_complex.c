@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo_complex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
+/*   By: ramandri <ramandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/11 20:14:03 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/12 09:46:07 by varandri         ###   ########.fr       */
+/*   Created: 2026/04/28 20:14:03 by ramandri          #+#    #+#             */
+/*   Updated: 2026/05/12 09:46:07 by ramandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
