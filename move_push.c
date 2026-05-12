@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move_push.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
+/*   By: ramandri <ramandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/07 21:55:54 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/12 02:57:36 by varandri         ###   ########.fr       */
+/*   Created: 2026/04/28 21:55:54 by ramandri          #+#    #+#             */
+/*   Updated: 2026/05/12 02:57:36 by ramandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
