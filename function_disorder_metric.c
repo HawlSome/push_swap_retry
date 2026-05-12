@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   function_disorder_metric.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
+/*   By: ramandri <ramandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/07 15:46:39 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/12 02:57:56 by varandri         ###   ########.fr       */
+/*   Created: 2026/05/07 15:46:39 by ramandri          #+#    #+#             */
+/*   Updated: 2026/05/12 02:57:56 by ramandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
