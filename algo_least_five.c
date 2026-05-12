@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 09:12:37 by varandri          #+#    #+#             */
-/*   Updated: 2026/05/11 02:45:15 by varandri         ###   ########.fr       */
+/*   Updated: 2026/05/12 03:17:39 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,8 @@ void	algo_least_five(t_stack **stack_a, t_stack **stack_b, t_moves **moves)
 		size_stack_a --;
 	}
 	if (size_stack_a == 3)
-	{
 		sort_three_max(stack_a, moves);
-		if ((*stack_a)->value > ((*stack_a)->next->value))
-			sa(stack_a, moves, 1);
-	}
+	if ((*stack_a)->value > ((*stack_a)->next->value))
+		sa(stack_a, moves, 1);
 	push_back(stack_a, stack_b, moves);
 }
